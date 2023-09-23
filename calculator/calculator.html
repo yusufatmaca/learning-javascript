@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <p class="result">0</p>
+        <div class="first-row">
+            <button class="1" onclick="update('1'); enable('operand');">1</button>
+            <button class="2" onclick="update('2'); enable('operand');">2</button>
+            <button class="3" onclick="update('3'); enable('operand');">3</button>
+            <button class="summation operand" onclick="update(' + '); enable('dot'); disable('summation');">+</button>
+        </div>
+        <div class="second-row">
+            <button class="4" onclick="update('4'); enable('operand');">4</button>
+            <button class="5" onclick="update('5'); enable('operand');">5</button>
+            <button class="6" onclick="update('6'); enable('operand');">6</button>
+            <button class="extraction operand" onclick="update(' - '); enable('dot'); disable('extraction')">-</button>
+        </div>
+        <div class="third-row">
+            <button class="7" onclick="update('7'); enable('operand');">7</button>
+            <button class="8" onclick="update('8'); enable('operand');">8</button>
+            <button class="9" onclick="update('9'); enable('operand');">9</button>
+            <button class="product operand" onclick="update(' * '); enable('dot'); disable('product')">*</button>
+        </div>
+        <div class="forth-row">
+            <button class="0" onclick="update('0'); enable('operand');">0</button>
+            <button class="dot" onclick="update('.'); disable('dot');">.</button>
+            <button class="=" onclick="calculate();">=</button>
+            <button class="divide operand" onclick="update(' / '); enable('dot'); disable('divide')">/</button>
+        </div>
+        <div class="fifth-row">
+            <button class="clear" onclick="update('c');">Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
